@@ -13,7 +13,6 @@
         android:layout_marginTop="48dp"
         android:gravity="center"
         android:hint="Введите значение N"
-        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"

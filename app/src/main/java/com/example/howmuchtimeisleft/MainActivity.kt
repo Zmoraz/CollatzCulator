@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
 
             listing.setText("")
             var temptext = textin.text
-            var x: Int = temptext.toString().toInt()
+            var x: Long = temptext.toString().toLong()
             var count = 0
 
             while(x > 1) {
 
 
-                if(x % 2 == 0) {
+                if(x % 2.0 == 0.0) {
                     x /= 2
                 } else {
                     x = (x * 3) + 1
