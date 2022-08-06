@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var vsego = findViewById<TextView>(R.id.textView3)
+        var total = findViewById<TextView>(R.id.textView3)
         var listing = findViewById<TextView>(R.id.textView)
         var button = findViewById<Button>(R.id.button)
         var textin = findViewById<TextInputEditText>(R.id.textInputEditText)
@@ -22,8 +22,10 @@ class MainActivity : AppCompatActivity() {
 
             listing.setText("")
             var temptext = textin.text
-            var x: Long = temptext.toString().toLong()
+            var x: Double = temptext.toString().toDouble()
             var count = 0
+
+
 
             while(x > 1) {
 
@@ -35,11 +37,12 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 count += 1
-                listing.append("${count}) $x\n")
+
+                listing.append("${count}) ${x}\n")
 
             }
 
-        vsego.setText("Всего итераций $count")
+        total.setText("Всего итераций $count")
 
 
 
