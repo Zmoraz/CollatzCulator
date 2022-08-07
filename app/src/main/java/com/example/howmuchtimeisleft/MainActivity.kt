@@ -12,15 +12,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var total = findViewById<TextView>(R.id.textView3)
-        var listing = findViewById<TextView>(R.id.textView)
-        var button = findViewById<Button>(R.id.button)
-        var textin = findViewById<TextInputEditText>(R.id.textInputEditText)
+        var total = findViewById<TextView>(R.id.message)
+        var list = findViewById<TextView>(R.id.list)
+        var go = findViewById<TextView>(R.id.go_button)
+        var textin = findViewById<TextView>(R.id.textinput)
+
+        val btn_1 = findViewById<TextView>(R.id.button1)
+        val btn_2 = findViewById<TextView>(R.id.button2)
+        val btn_3 = findViewById<TextView>(R.id.button3)
+        val btn_4 = findViewById<TextView>(R.id.button4)
+        val btn_5 = findViewById<TextView>(R.id.button5)
+        val btn_6 = findViewById<TextView>(R.id.button6)
+        val btn_7 = findViewById<TextView>(R.id.button7)
+        val btn_8 = findViewById<TextView>(R.id.button8)
+        val btn_9 = findViewById<TextView>(R.id.button9)
+        val btn_0 = findViewById<TextView>(R.id.button0)
+
+        btn_1.setOnClickListener {
+            textin.append("1")
+        }
 
 
-        button.setOnClickListener {
+        go.setOnClickListener {
 
-            listing.setText("")
+            list.setText("")
             var temptext = textin.text
             var x: Double = temptext.toString().toDouble()
             var count = 0
@@ -38,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
                 count += 1
 
-                listing.append("${count}) ${x}\n")
+                list.append("${count}) ${x}\n")
 
             }
 

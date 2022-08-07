@@ -13,4 +13,31 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Button.Color" parent="Theme.AppCompat">
+        <item name="background">@style/Button.Red</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button.Red" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="backgroundTint">@color/red_button</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button.Orange" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="backgroundTint">@color/orange_button</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+
 </resources>
