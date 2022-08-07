@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
         var total = findViewById<TextView>(R.id.message)
         var list = findViewById<TextView>(R.id.list)
-        var go = findViewById<TextView>(R.id.go_button)
         var textin = findViewById<TextView>(R.id.textinput)
 
         val btn_1 = findViewById<TextView>(R.id.button1)
@@ -27,13 +26,46 @@ class MainActivity : AppCompatActivity() {
         val btn_8 = findViewById<TextView>(R.id.button8)
         val btn_9 = findViewById<TextView>(R.id.button9)
         val btn_0 = findViewById<TextView>(R.id.button0)
+        val btn_clear = findViewById<TextView>(R.id.clear_button)
+        val btn_go = findViewById<TextView>(R.id.go_button)
 
         btn_1.setOnClickListener {
             textin.append("1")
         }
+        btn_2.setOnClickListener {
+            textin.append("2")
+        }
+        btn_3.setOnClickListener {
+            textin.append("3")
+        }
+        btn_4.setOnClickListener {
+            textin.append("4")
+        }
+        btn_5.setOnClickListener {
+            textin.append("5")
+        }
+        btn_6.setOnClickListener {
+            textin.append("6")
+        }
+        btn_7.setOnClickListener {
+            textin.append("7")
+        }
+        btn_8.setOnClickListener {
+            textin.append("8")
+        }
+        btn_9.setOnClickListener {
+            textin.append("9")
+        }
+        btn_0.setOnClickListener {
+            textin.append("0")
+        }
 
-
-        go.setOnClickListener {
+        btn_clear.setOnClickListener {
+            total.setText("Введите число")
+            list.setText("")
+            textin.setText("")
+        }
+        btn_go.setOnClickListener {
 
             list.setText("")
             var temptext = textin.text

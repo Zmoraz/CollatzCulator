@@ -12,10 +12,15 @@
     <TextView
         android:id="@+id/textinput"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:gravity="center"
-        android:inputType="number" />
+        android:textSize="25dp"
+        android:singleLine="false"
+        android:maxLines="3"
+        android:maxLength="48"/>
 
     <TextView
         android:id="@+id/message"
@@ -31,10 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        android:layout_marginBottom="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
