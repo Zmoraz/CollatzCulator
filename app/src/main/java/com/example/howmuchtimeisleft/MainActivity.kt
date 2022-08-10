@@ -1,11 +1,13 @@
 package com.example.howmuchtimeisleft
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CalendarView
 import android.widget.TextView
-import com.google.android.material.textfield.TextInputEditText
+import androidx.appcompat.app.AppCompatActivity
+import com.jjoe64.graphview.GraphView
+import com.jjoe64.graphview.series.DataPoint
+import com.jjoe64.graphview.series.LineGraphSeries
+import com.jjoe64.graphview.series.PointsGraphSeries
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +17,23 @@ class MainActivity : AppCompatActivity() {
         var total = findViewById<TextView>(R.id.message)
         var list = findViewById<TextView>(R.id.list)
         var textin = findViewById<TextView>(R.id.textinput)
+        var graph = findViewById<GraphView>(R.id.graph)
+
+
+
+        val series: LineGraphSeries<DataPoint> = LineGraphSeries(
+            arrayOf(
+                DataPoint(0.0, 959595.0),
+                DataPoint(1.0, 594499222.0),
+                DataPoint(2.0, 56566499.0),
+                DataPoint(3.0, 4.0),
+                DataPoint(4.0, 2.0),
+                DataPoint(5.0, 1.0)
+            )
+        )
+        graph.addSeries(series)
+
+
 
         val btn_1 = findViewById<TextView>(R.id.button1)
         val btn_2 = findViewById<TextView>(R.id.button2)
@@ -31,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_1.setOnClickListener {
             textin.append("1")
+
         }
         btn_2.setOnClickListener {
             textin.append("2")
@@ -76,7 +96,6 @@ class MainActivity : AppCompatActivity() {
 
             while(x > 1) {
 
-
                 if(x % 2.0 == 0.0) {
                     x /= 2
                 } else {
@@ -84,6 +103,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 count += 1
+
+
 
                 list.append("${count}) ${x}\n")
 
