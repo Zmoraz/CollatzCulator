@@ -17,22 +17,6 @@ class MainActivity : AppCompatActivity() {
         var total = findViewById<TextView>(R.id.message)
         var list = findViewById<TextView>(R.id.list)
         var textin = findViewById<TextView>(R.id.textinput)
-        var graph = findViewById<GraphView>(R.id.graph)
-
-
-
-        val series: LineGraphSeries<DataPoint> = LineGraphSeries(
-            arrayOf(
-                DataPoint(0.0, 959595.0),
-                DataPoint(1.0, 594499222.0),
-                DataPoint(2.0, 56566499.0),
-                DataPoint(3.0, 4.0),
-                DataPoint(4.0, 2.0),
-                DataPoint(5.0, 1.0)
-            )
-        )
-        graph.addSeries(series)
-
 
 
         val btn_1 = findViewById<TextView>(R.id.button1)
